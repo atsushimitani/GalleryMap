@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0107BCBF21BD319300AC984E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0107BCBE21BD319300AC984E /* GoogleService-Info.plist */; };
 		014243AC21B418AD00A7B293 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014243AB21B418AD00A7B293 /* Map.storyboard */; };
 		014243AE21B418C600A7B293 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014243AD21B418C600A7B293 /* MapViewController.swift */; };
 		01ACDA2F21BCD8E900505448 /* Key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01ACDA2E21BCD8E900505448 /* Key.plist */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0107BCBE21BD319300AC984E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		014243AB21B418AD00A7B293 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		014243AD21B418C600A7B293 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		01ACDA2E21BCD8E900505448 /* Key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Key.plist; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				01EF479F21A99723002E0532 /* Main.storyboard */,
 				01EF47A221A99725002E0532 /* Assets.xcassets */,
 				01EF47A421A99725002E0532 /* LaunchScreen.storyboard */,
+				0107BCBE21BD319300AC984E /* GoogleService-Info.plist */,
 				01EF47A721A99725002E0532 /* Info.plist */,
 				01ACDA2E21BCD8E900505448 /* Key.plist */,
 			);
@@ -117,6 +120,7 @@
 				01EF479521A99723002E0532 /* Frameworks */,
 				01EF479621A99723002E0532 /* Resources */,
 				75496F57CAC7CB110F052EB3 /* [CP] Copy Pods Resources */,
+				10E3D017EDC6D88BCBD7E4AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,12 +174,49 @@
 				01EF47A321A99725002E0532 /* Assets.xcassets in Resources */,
 				01EF47A121A99723002E0532 /* Main.storyboard in Resources */,
 				014243AC21B418AD00A7B293 /* Map.storyboard in Resources */,
+				0107BCBF21BD319300AC984E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		10E3D017EDC6D88BCBD7E4AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GalleryMap/Pods-GalleryMap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GalleryMap/Pods-GalleryMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		75496F57CAC7CB110F052EB3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

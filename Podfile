@@ -11,4 +11,6 @@ target 'GalleryMap' do
   # Pods for GalleryMap
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
 end
