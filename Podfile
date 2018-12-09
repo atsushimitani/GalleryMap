@@ -10,5 +10,5 @@ target 'GalleryMap' do
 
   # Pods for GalleryMap
   pod 'GoogleMaps'
-
+  pod 'GooglePlaces'
 end
