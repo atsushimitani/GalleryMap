@@ -13,12 +13,12 @@ import GooglePlaces
 class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: GMSMapView!
-    
+
     private var locationManager: CLLocationManager?
     private var currentLocation: CLLocation?
     private var placesClient: GMSPlacesClient!
-    private var zoomLevel: Float = 15.0
-    /// 初期描画の判断に利用
+    private var zoom: Float = 15.0
+
     private var initView: Bool = false
     
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         self.mapView.settings.compassButton = true
         self.mapView.settings.myLocationButton = true
         self.mapView.delegate = self
-        
+
         // 位置情報関連の初期化
         self.locationManager = CLLocationManager()
         self.locationManager?.desiredAccuracy = kCLLocationAccuracyBest
@@ -38,6 +38,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         self.locationManager?.startUpdatingLocation()
         self.locationManager?.delegate = self
         self.placesClient = GMSPlacesClient.shared()
+        
+        // marker
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: 35.659104, longitude: 139.703742)
+        marker.title = "Tomio Koyama"
+        marker.snippet = "現代アート"
+        marker.map = mapView
    }
 
     override func didReceiveMemoryWarning() {
@@ -48,7 +55,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if !self.initView {
             // 初期描画時のマップ中心位置の移動
-            let camera = GMSCameraPosition.camera(withTarget: (locations.last?.coordinate)!, zoom: self.zoomLevel)
+            let camera = GMSCameraPosition.camera(withTarget: (locations.last?.coordinate)!, zoom: self.zoom)
             self.mapView.camera = camera
             self.locationManager?.stopUpdatingLocation()
             self.initView = true

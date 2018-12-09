@@ -18,13 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vly-6r-7vp" customClass="GMSMapView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vly-6r-7vp" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vly-6r-7vp" firstAttribute="leading" secondItem="Hhm-eY-qOq" secondAttribute="leading" id="FND-kJ-ua4"/>
+                            <constraint firstItem="Vly-6r-7vp" firstAttribute="top" secondItem="GDu-3y-vYm" secondAttribute="top" id="MQ2-p1-QqC"/>
+                            <constraint firstItem="Vly-6r-7vp" firstAttribute="bottom" secondItem="Hhm-eY-qOq" secondAttribute="bottom" id="d9H-X7-rYO"/>
+                            <constraint firstItem="Vly-6r-7vp" firstAttribute="trailing" secondItem="Hhm-eY-qOq" secondAttribute="trailing" id="nvM-4O-CHp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Hhm-eY-qOq"/>
                     </view>
                     <connections>
