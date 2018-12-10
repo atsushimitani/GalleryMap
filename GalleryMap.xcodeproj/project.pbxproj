@@ -10,7 +10,7 @@
 		0107BCBF21BD319300AC984E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0107BCBE21BD319300AC984E /* GoogleService-Info.plist */; };
 		014243AC21B418AD00A7B293 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014243AB21B418AD00A7B293 /* Map.storyboard */; };
 		014243AE21B418C600A7B293 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014243AD21B418C600A7B293 /* MapViewController.swift */; };
-		016520D421BE8F00002F62C9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016520D321BE8F00002F62C9 /* MapView.swift */; };
+		016520D421BE8F00002F62C9 /* MyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016520D321BE8F00002F62C9 /* MyMapView.swift */; };
 		01ACDA2F21BCD8E900505448 /* Key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01ACDA2E21BCD8E900505448 /* Key.plist */; };
 		01EF479C21A99723002E0532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF479B21A99723002E0532 /* AppDelegate.swift */; };
 		01EF47A121A99723002E0532 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01EF479F21A99723002E0532 /* Main.storyboard */; };
@@ -23,7 +23,7 @@
 		0107BCBE21BD319300AC984E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		014243AB21B418AD00A7B293 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		014243AD21B418C600A7B293 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		016520D321BE8F00002F62C9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		016520D321BE8F00002F62C9 /* MyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapView.swift; sourceTree = "<group>"; };
 		01ACDA2E21BCD8E900505448 /* Key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Key.plist; sourceTree = "<group>"; };
 		01EF479821A99723002E0532 /* GalleryMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EF479B21A99723002E0532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		016520D221BE8E8B002F62C9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				016520D321BE8F00002F62C9 /* MapView.swift */,
+				016520D321BE8F00002F62C9 /* MyMapView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				014243AE21B418C600A7B293 /* MapViewController.swift in Sources */,
-				016520D421BE8F00002F62C9 /* MapView.swift in Sources */,
+				016520D421BE8F00002F62C9 /* MyMapView.swift in Sources */,
 				01EF479C21A99723002E0532 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

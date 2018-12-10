@@ -11,16 +11,10 @@ import GoogleMaps
 import GooglePlaces
 import Firebase
 
-class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController {
     
-    @IBOutlet weak var mapView: GMSMapView!
-
-    // MapViewに移したい
-    private var locationManager: CLLocationManager?
-    private var currentLocation: CLLocation?
-    private var placesClient: GMSPlacesClient!
-    private var zoom: Float = 15.0
-
+    @IBOutlet weak var mapView: MyMapView!
+    
     private var needInitView = false
     
     private let needLoadFromFirestore = false
@@ -28,14 +22,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setup()
-
-        // ここから下はMapクラスに委譲できる
-        initLocationManager()
-        
-        
-        // TODO 位置情報を取得できない場合の対応
-        
+        mapView.setup()
+        mapView.initLocationManager()
         
         // loadmapinfoメソッドに切り出して、オリジナルクラスに移す
         // Firestoreからデータ取得
@@ -69,51 +57,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
                 }
             }
         }
-        
-        // TODO: - Realm
-        if (needLoadFromFirestore) {
-//            loadMapInfo()
-        } else {
-//            loadMapInfo()
-        }
-    }
-    
-    private func setup() {
-        mapView.isMyLocationEnabled = true
-        mapView.mapType = GMSMapViewType.normal
-        mapView.settings.compassButton = true
-        mapView.settings.myLocationButton = true
-        mapView.delegate = self
-    }
-    
-    // MARK: - Google Map Functions
-    
-    private func initLocationManager() {
-        // 位置情報関連の初期化
-        // MapViewに入れてもいいと思う
-        locationManager = CLLocationManager()
-        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager?.requestAlwaysAuthorization()
-        locationManager?.distanceFilter = 50
-        locationManager?.startUpdatingLocation()
-        locationManager?.delegate = self
-        placesClient = GMSPlacesClient.shared()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    // オリジナルクラスに移す
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if !needInitView {
-            // 初期描画時のマップ中心位置の移動
-            let camera = GMSCameraPosition.camera(withTarget: (locations.last?.coordinate)!, zoom: zoom)
-            mapView.camera = camera
-            locationManager?.stopUpdatingLocation()
-            needInitView = true
-        }
     }
 
 }

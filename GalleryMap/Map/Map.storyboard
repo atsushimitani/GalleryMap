@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vly-6r-7vp" customClass="GMSMapView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vly-6r-7vp" customClass="MyMapView" customModule="GalleryMap" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -33,7 +33,7 @@
                         <viewLayoutGuide key="safeArea" id="Hhm-eY-qOq"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="Vly-6r-7vp" id="Num-GX-muq"/>
+                        <outlet property="mapView" destination="Vly-6r-7vp" id="XA1-Py-gRL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVd-Y9-W1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
