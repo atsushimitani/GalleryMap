@@ -10,9 +10,9 @@
 		0107BCBF21BD319300AC984E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0107BCBE21BD319300AC984E /* GoogleService-Info.plist */; };
 		014243AC21B418AD00A7B293 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014243AB21B418AD00A7B293 /* Map.storyboard */; };
 		014243AE21B418C600A7B293 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014243AD21B418C600A7B293 /* MapViewController.swift */; };
+		016520D421BE8F00002F62C9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016520D321BE8F00002F62C9 /* MapView.swift */; };
 		01ACDA2F21BCD8E900505448 /* Key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01ACDA2E21BCD8E900505448 /* Key.plist */; };
 		01EF479C21A99723002E0532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF479B21A99723002E0532 /* AppDelegate.swift */; };
-		01EF479E21A99723002E0532 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF479D21A99723002E0532 /* ViewController.swift */; };
 		01EF47A121A99723002E0532 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01EF479F21A99723002E0532 /* Main.storyboard */; };
 		01EF47A321A99725002E0532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01EF47A221A99725002E0532 /* Assets.xcassets */; };
 		01EF47A621A99725002E0532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01EF47A421A99725002E0532 /* LaunchScreen.storyboard */; };
@@ -23,10 +23,10 @@
 		0107BCBE21BD319300AC984E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		014243AB21B418AD00A7B293 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		014243AD21B418C600A7B293 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		016520D321BE8F00002F62C9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		01ACDA2E21BCD8E900505448 /* Key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Key.plist; sourceTree = "<group>"; };
 		01EF479821A99723002E0532 /* GalleryMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EF479B21A99723002E0532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01EF479D21A99723002E0532 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01EF47A021A99723002E0532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01EF47A221A99725002E0532 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01EF47A521A99725002E0532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +57,14 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		016520D221BE8E8B002F62C9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				016520D321BE8F00002F62C9 /* MapView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		01EF478F21A99722002E0532 = {
 			isa = PBXGroup;
 			children = (
@@ -78,9 +86,9 @@
 		01EF479A21A99723002E0532 /* GalleryMap */ = {
 			isa = PBXGroup;
 			children = (
+				016520D221BE8E8B002F62C9 /* Common */,
 				014243AA21B4188D00A7B293 /* Map */,
 				01EF479B21A99723002E0532 /* AppDelegate.swift */,
-				01EF479D21A99723002E0532 /* ViewController.swift */,
 				01EF479F21A99723002E0532 /* Main.storyboard */,
 				01EF47A221A99725002E0532 /* Assets.xcassets */,
 				01EF47A421A99725002E0532 /* LaunchScreen.storyboard */,
@@ -262,8 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01EF479E21A99723002E0532 /* ViewController.swift in Sources */,
 				014243AE21B418C600A7B293 /* MapViewController.swift in Sources */,
+				016520D421BE8F00002F62C9 /* MapView.swift in Sources */,
 				01EF479C21A99723002E0532 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
