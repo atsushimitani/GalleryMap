@@ -58,10 +58,11 @@ class MyMapView: GMSMapView, GMSMapViewDelegate, CLLocationManagerDelegate {
         
         // TODO:- 詳細画面に遷移
         let mapStoryboard: UIStoryboard = UIStoryboard(name: "Map", bundle: nil)
-        let mapViewController = mapStoryboard?.instantiateInitialViewController()
+        let mapViewController = mapStoryboard.instantiateInitialViewController()
         let detailStoryboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
-        let detailViewController = detailStoryboard?.instantiateInitialViewController()
+        let detailViewController = detailStoryboard.instantiateInitialViewController()
 
+        mapViewController?.present(detailViewController, animated: true, completion: nil)
     }
 
     // ギャラリーのマーカーを描画
