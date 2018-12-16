@@ -13,7 +13,7 @@
         <!--Map View Controller-->
         <scene sceneID="BL7-EE-4OG">
             <objects>
-                <viewController id="3Cb-4t-IdI" customClass="MapViewController" customModule="GalleryMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Map" id="3Cb-4t-IdI" customClass="MapViewController" customModule="GalleryMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GDu-3y-vYm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

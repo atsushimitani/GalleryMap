@@ -32,8 +32,7 @@ class MapViewController: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    let gallery = Gallery(id: document.documentID, data: document.data())
+                    let gallery = GalleryEntity(id: document.documentID, data: document.data())
                     self.mapView.drawGalleryMarker(gallery: gallery)
                 }
             }

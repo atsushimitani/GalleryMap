@@ -1,5 +1,5 @@
 //
-//  Gallery.swift
+//  GalleryEntity.swift
 //  GalleryMap
 //
 //  Created by 三谷淳史 on 2018/12/11.
@@ -8,7 +8,7 @@
 
 import Firebase
 
-class Gallery: NSObject {
+class GalleryEntity: NSObject {
 
     var id: String?
     var name: String?

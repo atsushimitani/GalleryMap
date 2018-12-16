@@ -10,6 +10,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak private var nameLabel: UILabel!
+    
+    @IBOutlet weak private var genreLabel: UILabel!
+    
+    @IBOutlet weak private var addressLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

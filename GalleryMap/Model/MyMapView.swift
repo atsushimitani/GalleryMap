@@ -1,5 +1,5 @@
 //
-//  MapView.swift
+//  MyMapView.swift
 //  GalleryMap
 //
 //  Created by 三谷淳史 on 2018/12/10.
@@ -18,14 +18,6 @@ class MyMapView: GMSMapView, GMSMapViewDelegate, CLLocationManagerDelegate {
     var zoom: Float = 15.0
     
     var didInitView = false
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
  
     func setup() {
         isMyLocationEnabled = true
@@ -48,6 +40,7 @@ class MyMapView: GMSMapView, GMSMapViewDelegate, CLLocationManagerDelegate {
         placesClient = GMSPlacesClient.shared()
     }
     
+    // 位置情報の更新があった場合の処理
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if !didInitView {
             // 初期描画時のマップ中心位置の移動
@@ -58,17 +51,36 @@ class MyMapView: GMSMapView, GMSMapViewDelegate, CLLocationManagerDelegate {
         }
     }
     
+    // マーカーの情報ウィンドウがタップされた際の処理
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        let userData = marker.userData as! [String:String]
+        let id = userData["id"];
+        
+        // TODO:- 詳細画面に遷移
+        let mapStoryboard: UIStoryboard = UIStoryboard(name: "Map", bundle: nil)
+        let mapViewController = mapStoryboard?.instantiateInitialViewController()
+        let detailStoryboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
+        let detailViewController = detailStoryboard?.instantiateInitialViewController()
+
+    }
+
     // ギャラリーのマーカーを描画
-    func drawGalleryMarker(gallery: Gallery) {
+    func drawGalleryMarker(gallery: GalleryEntity) {
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(
-            latitude: gallery.latitude!, longitude: gallery.longitude!)
+        
+        marker.position = CLLocationCoordinate2D(latitude: gallery.latitude!, longitude: gallery.longitude!)
         marker.title = gallery.name
+        
         var snipetText = ""
         for genre in gallery.genres {
             snipetText += "\(genre) "
         }
         marker.snippet = snipetText
+        
+        var userData = [String:String]()
+        userData["id"] = gallery.id
+        marker.userData = userData
+        
         marker.map = self
     }
 }
