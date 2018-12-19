@@ -10,6 +10,11 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
+protocol MyMapViewDelegate {
+    // TODO:- 引数を定義
+    func tapMap()
+}
+
 class MyMapView: GMSMapView, GMSMapViewDelegate, CLLocationManagerDelegate {
 
     var locationManager: CLLocationManager?
@@ -18,6 +23,8 @@ class MyMapView: GMSMapView, GMSMapViewDelegate, CLLocationManagerDelegate {
     var zoom: Float = 15.0
     
     var didInitView = false
+    
+    var myMapViewDelegate: MyMapViewDelegate?
  
     func setup() {
         isMyLocationEnabled = true
@@ -56,16 +63,10 @@ class MyMapView: GMSMapView, GMSMapViewDelegate, CLLocationManagerDelegate {
         let userData = marker.userData as! [String:String]
         let id = userData["id"];
         
-        // TODO:- 詳細画面に遷移
-        let mapStoryboard: UIStoryboard = UIStoryboard(name: "Map", bundle: nil)
-        let mapViewController = mapStoryboard.instantiateInitialViewController()
-        let detailStoryboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
-        let detailViewController = detailStoryboard.instantiateInitialViewController()
-
-        mapViewController?.present(detailViewController, animated: true, completion: nil)
+        myMapViewDelegate?.tapMap()
     }
 
-    // ギャラリーのマーカーを描画
+    // マーカーを描画
     func drawGalleryMarker(gallery: GalleryEntity) {
         let marker = GMSMarker()
         

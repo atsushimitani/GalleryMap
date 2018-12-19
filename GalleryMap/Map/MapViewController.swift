@@ -11,7 +11,7 @@ import GoogleMaps
 import GooglePlaces
 import Firebase
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MyMapViewDelegate {
     
     @IBOutlet weak var mapView: MyMapView!
     
@@ -21,6 +21,8 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.myMapViewDelegate = self
 
         mapView.setup()
         mapView.initLocationManager()
@@ -42,6 +44,14 @@ class MapViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tapMap() {
+        let detailStoryboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
+        
+        if let detailViewController = detailStoryboard.instantiateInitialViewController() {
+            present(detailViewController, animated: true, completion: nil)
+        }
     }
 
 }
