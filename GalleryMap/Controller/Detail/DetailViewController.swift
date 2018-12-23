@@ -16,15 +16,17 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak private var addressLabel: UILabel!
     
+    private(set) var galleryId: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    func setGalleryId(galleryId: String) {
+        self.galleryId = galleryId
+    }
 }

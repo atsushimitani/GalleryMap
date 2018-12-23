@@ -15,10 +15,6 @@ class MapViewController: UIViewController, MyMapViewDelegate {
     
     @IBOutlet weak var mapView: MyMapView!
     
-    private var needInitView = false
-    
-    private let needLoadFromFirestore = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,13 +39,15 @@ class MapViewController: UIViewController, MyMapViewDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    func tapMap() {
+    // Markerの情報ウィンドウをタップした際の動作
+    func tapInfoWindow(galleryId: String) {
         let detailStoryboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
         
-        if let detailViewController = detailStoryboard.instantiateInitialViewController() {
+        if let detailViewController = detailStoryboard.instantiateInitialViewController() as? DetailViewController {
+            // 詳細画面に遷移する
+            detailViewController.setGalleryId(galleryId: galleryId)
             present(detailViewController, animated: true, completion: nil)
         }
     }

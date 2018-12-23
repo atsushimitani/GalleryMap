@@ -11,18 +11,17 @@ import GoogleMaps
 import GooglePlaces
 
 protocol MyMapViewDelegate {
-    // TODO:- 引数を定義
-    func tapMap()
+    func tapInfoWindow(galleryId :String)
 }
 
 class MyMapView: GMSMapView, GMSMapViewDelegate, CLLocationManagerDelegate {
 
-    var locationManager: CLLocationManager?
-    var currentLocation: CLLocation?
-    var placesClient: GMSPlacesClient!
-    var zoom: Float = 15.0
+    private var locationManager: CLLocationManager?
+    private var currentLocation: CLLocation?
+    private var placesClient: GMSPlacesClient!
+    private var zoom: Float = 15.0
     
-    var didInitView = false
+    private var didInitView = false
     
     var myMapViewDelegate: MyMapViewDelegate?
  
@@ -63,7 +62,7 @@ class MyMapView: GMSMapView, GMSMapViewDelegate, CLLocationManagerDelegate {
         let userData = marker.userData as! [String:String]
         let id = userData["id"];
         
-        myMapViewDelegate?.tapMap()
+        myMapViewDelegate?.tapInfoWindow(galleryId: id!)
     }
 
     // マーカーを描画

@@ -57,7 +57,6 @@
 		014243AA21B4188D00A7B293 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				014243AB21B418AD00A7B293 /* Map.storyboard */,
 				014243AD21B418C600A7B293 /* MapViewController.swift */,
 			);
 			path = Map;
@@ -67,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				01BA813B21BFDE450005E9DD /* GalleryEntity.swift */,
-				016520D321BE8F00002F62C9 /* MyMapView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -76,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				01BA814421BFEC550005E9DD /* DetailViewController.swift */,
-				01BA814621BFEEA90005E9DD /* Detail.storyboard */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -102,9 +99,10 @@
 		01EF479A21A99723002E0532 /* GalleryMap */ = {
 			isa = PBXGroup;
 			children = (
+				01FBF5B021CA884B006D6B39 /* Controller */,
+				01FBF5AF21CA8844006D6B39 /* View */,
+				01FBF5AE21CA8831006D6B39 /* UserInterface */,
 				01441D4F21C6463E0004FE4E /* Model */,
-				01BA813F21BFEB6E0005E9DD /* Detail */,
-				014243AA21B4188D00A7B293 /* Map */,
 				01EF479B21A99723002E0532 /* AppDelegate.swift */,
 				01EF479F21A99723002E0532 /* Main.storyboard */,
 				01EF47A221A99725002E0532 /* Assets.xcassets */,
@@ -114,6 +112,32 @@
 				01ACDA2E21BCD8E900505448 /* Key.plist */,
 			);
 			path = GalleryMap;
+			sourceTree = "<group>";
+		};
+		01FBF5AE21CA8831006D6B39 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				014243AB21B418AD00A7B293 /* Map.storyboard */,
+				01BA814621BFEEA90005E9DD /* Detail.storyboard */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		01FBF5AF21CA8844006D6B39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				016520D321BE8F00002F62C9 /* MyMapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01FBF5B021CA884B006D6B39 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01BA813F21BFEB6E0005E9DD /* Detail */,
+				014243AA21B4188D00A7B293 /* Map */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		15EF03EB14370040147C0031 /* Pods */ = {
