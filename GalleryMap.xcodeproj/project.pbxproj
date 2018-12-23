@@ -104,7 +104,6 @@
 				01FBF5AE21CA8831006D6B39 /* UserInterface */,
 				01441D4F21C6463E0004FE4E /* Model */,
 				01EF479B21A99723002E0532 /* AppDelegate.swift */,
-				01EF479F21A99723002E0532 /* Main.storyboard */,
 				01EF47A221A99725002E0532 /* Assets.xcassets */,
 				01EF47A421A99725002E0532 /* LaunchScreen.storyboard */,
 				0107BCBE21BD319300AC984E /* GoogleService-Info.plist */,
@@ -118,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				014243AB21B418AD00A7B293 /* Map.storyboard */,
+				01EF479F21A99723002E0532 /* Main.storyboard */,
 				01BA814621BFEEA90005E9DD /* Detail.storyboard */,
 			);
 			path = UserInterface;
