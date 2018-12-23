@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak private var genreLabel: UILabel!
     
-    @IBOutlet weak private var addressLabel: UILabel!
+    @IBOutlet weak private var urlLabel: UILabel!
     
     private(set) var galleryId: String?
 
@@ -56,6 +56,6 @@ class DetailViewController: UIViewController {
         }
         self.genreLabel.text = genreText
         
-        self.addressLabel.text = gallery.url
+        self.urlLabel.text = gallery.url
     }
 }
