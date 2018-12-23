@@ -18,29 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKa-jE-Icq">
-                                <rect key="frame" x="25" y="49" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKa-jE-Icq">
+                                <rect key="frame" x="20" y="40" width="335" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGf-lf-OSW">
+                                <rect key="frame" x="20" y="86.5" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGf-lf-OSW">
-                                <rect key="frame" x="25" y="96" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByB-66-lDx">
-                                <rect key="frame" x="25" y="146" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByB-66-lDx">
+                                <rect key="frame" x="20" y="127.5" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5rl-4E-11W" firstAttribute="trailing" secondItem="ByB-66-lDx" secondAttribute="trailing" constant="20" id="Anw-57-SXz"/>
+                            <constraint firstItem="dKa-jE-Icq" firstAttribute="leading" secondItem="5rl-4E-11W" secondAttribute="leading" constant="20" id="Dfw-Bc-B4G"/>
+                            <constraint firstItem="5rl-4E-11W" firstAttribute="trailing" secondItem="OGf-lf-OSW" secondAttribute="trailing" constant="20" id="H8B-cG-kWw"/>
+                            <constraint firstItem="ByB-66-lDx" firstAttribute="leading" secondItem="5rl-4E-11W" secondAttribute="leading" constant="20" id="HkQ-4D-jNa"/>
+                            <constraint firstItem="OGf-lf-OSW" firstAttribute="top" secondItem="dKa-jE-Icq" secondAttribute="bottom" constant="20" id="agt-5J-Fgr"/>
+                            <constraint firstItem="ByB-66-lDx" firstAttribute="top" secondItem="OGf-lf-OSW" secondAttribute="bottom" constant="20" id="ax2-TC-cOm"/>
+                            <constraint firstItem="5rl-4E-11W" firstAttribute="trailing" secondItem="dKa-jE-Icq" secondAttribute="trailing" constant="20" id="kqz-9K-VDQ"/>
+                            <constraint firstItem="dKa-jE-Icq" firstAttribute="top" secondItem="5rl-4E-11W" secondAttribute="top" constant="20" id="krq-Gn-5X7"/>
+                            <constraint firstItem="OGf-lf-OSW" firstAttribute="leading" secondItem="5rl-4E-11W" secondAttribute="leading" constant="20" id="vdC-1r-gat"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5rl-4E-11W"/>
                     </view>
                     <connections>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class DetailViewController: UIViewController {
 
@@ -20,6 +21,20 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let galleryId : String = self.galleryId else {return}
+   
+        // Firestoreからデータ取得
+        let db = Firestore.firestore()
+        let docRef = db.collection("galleries").document(galleryId)
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let gallery = GalleryEntity(id: galleryId, data: document.data()!)
+                self.loadGalleryDetail(gallery: gallery)
+            } else {
+                print("Document does not exist")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,5 +43,19 @@ class DetailViewController: UIViewController {
 
     func setGalleryId(galleryId: String) {
         self.galleryId = galleryId
+    }
+    
+    // ギャラリー情報表示
+    private func loadGalleryDetail(gallery: GalleryEntity) {
+        self.nameLabel.text = gallery.name
+        
+        // ジャンル名を半角スペース区切りで表示
+        var genreText = ""
+        for genre in gallery.genres {
+            genreText += "\(genre) "
+        }
+        self.genreLabel.text = genreText
+        
+        self.addressLabel.text = gallery.url
     }
 }
