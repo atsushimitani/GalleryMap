@@ -47,7 +47,7 @@ class MapViewController: UIViewController, MyMapViewDelegate {
         
         if let detailViewController = detailStoryboard.instantiateInitialViewController() as? DetailViewController {
             // 詳細画面に遷移する
-            detailViewController.setGalleryId(galleryId: galleryId)
+            detailViewController.setGalleryId(id: galleryId)
             self.navigationController?.pushViewController(detailViewController, animated: true)
         }
     }

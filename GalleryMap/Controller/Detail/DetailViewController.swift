@@ -41,7 +41,7 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    func setGalleryId(galleryId: String) {
+    func setGalleryId(id galleryId: String) {
         self.galleryId = galleryId
     }
     
