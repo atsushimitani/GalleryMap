@@ -19,9 +19,15 @@ class MapViewController: UIViewController, MyMapViewDelegate {
         super.viewDidLoad()
         
         mapView.myMapViewDelegate = self
-
+        
         mapView.setup()
         mapView.initLocationManager()
+        
+        // buttonを表示するs
+        let button = UIButton(frame: CGRect(x: 10, y: 35, width: 100, height: 30))
+        button.setTitle("都市を選択", for: .normal)
+//        button.addTarget(self, action: #selector(showCitiesOption()), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(button)
         
         // Firestoreからデータ取得
         let db = Firestore.firestore()
@@ -51,5 +57,10 @@ class MapViewController: UIViewController, MyMapViewDelegate {
             self.navigationController?.pushViewController(detailViewController, animated: true)
         }
     }
+    
+    // 都市選択のプルダウンを表示
+    @objc func showCitiesOption() {
 
+    }
+    
 }

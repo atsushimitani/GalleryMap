@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0107BCBF21BD319300AC984E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0107BCBE21BD319300AC984E /* GoogleService-Info.plist */; };
+		0123068921D0C6840021F7CC /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0123068821D0C6840021F7CC /* Information.storyboard */; };
+		0123068B21D0C6970021F7CC /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0123068A21D0C6970021F7CC /* Favorites.storyboard */; };
+		0123068F21D0C8150021F7CC /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0123068E21D0C8150021F7CC /* InformationViewController.swift */; };
+		0123069121D0C8240021F7CC /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0123069021D0C8240021F7CC /* FavoriteViewController.swift */; };
 		014243AC21B418AD00A7B293 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014243AB21B418AD00A7B293 /* Map.storyboard */; };
 		014243AE21B418C600A7B293 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014243AD21B418C600A7B293 /* MapViewController.swift */; };
 		016520D421BE8F00002F62C9 /* MyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016520D321BE8F00002F62C9 /* MyMapView.swift */; };
@@ -24,6 +28,10 @@
 
 /* Begin PBXFileReference section */
 		0107BCBE21BD319300AC984E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0123068821D0C6840021F7CC /* Information.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
+		0123068A21D0C6970021F7CC /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		0123068E21D0C8150021F7CC /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		0123069021D0C8240021F7CC /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		014243AB21B418AD00A7B293 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		014243AD21B418C600A7B293 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		016520D321BE8F00002F62C9 /* MyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapView.swift; sourceTree = "<group>"; };
@@ -54,6 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0123068C21D0C7E80021F7CC /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				0123069021D0C8240021F7CC /* FavoriteViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		0123068D21D0C7EF0021F7CC /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				0123068E21D0C8150021F7CC /* InformationViewController.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
 		014243AA21B4188D00A7B293 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +143,8 @@
 				014243AB21B418AD00A7B293 /* Map.storyboard */,
 				01EF479F21A99723002E0532 /* Main.storyboard */,
 				01BA814621BFEEA90005E9DD /* Detail.storyboard */,
+				0123068821D0C6840021F7CC /* Information.storyboard */,
+				0123068A21D0C6970021F7CC /* Favorites.storyboard */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -134,6 +160,8 @@
 		01FBF5B021CA884B006D6B39 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0123068D21D0C7EF0021F7CC /* Information */,
+				0123068C21D0C7E80021F7CC /* Favorite */,
 				01BA813F21BFEB6E0005E9DD /* Detail */,
 				014243AA21B4188D00A7B293 /* Map */,
 			);
@@ -220,7 +248,9 @@
 			files = (
 				01EF47A621A99725002E0532 /* LaunchScreen.storyboard in Resources */,
 				01ACDA2F21BCD8E900505448 /* Key.plist in Resources */,
+				0123068B21D0C6970021F7CC /* Favorites.storyboard in Resources */,
 				01EF47A321A99725002E0532 /* Assets.xcassets in Resources */,
+				0123068921D0C6840021F7CC /* Information.storyboard in Resources */,
 				01EF47A121A99723002E0532 /* Main.storyboard in Resources */,
 				01BA814721BFEEA90005E9DD /* Detail.storyboard in Resources */,
 				014243AC21B418AD00A7B293 /* Map.storyboard in Resources */,
@@ -315,8 +345,10 @@
 				01BA813C21BFDE450005E9DD /* GalleryEntity.swift in Sources */,
 				014243AE21B418C600A7B293 /* MapViewController.swift in Sources */,
 				01BA814521BFEC550005E9DD /* DetailViewController.swift in Sources */,
+				0123069121D0C8240021F7CC /* FavoriteViewController.swift in Sources */,
 				016520D421BE8F00002F62C9 /* MyMapView.swift in Sources */,
 				01EF479C21A99723002E0532 /* AppDelegate.swift in Sources */,
+				0123068F21D0C8150021F7CC /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

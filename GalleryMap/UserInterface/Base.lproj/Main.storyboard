@@ -20,6 +20,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="II6-lN-rzL" kind="relationship" relationship="viewControllers" id="b59-od-Qwc"/>
+                        <segue destination="gcc-RO-xQb" kind="relationship" relationship="viewControllers" id="otd-4B-YS0"/>
+                        <segue destination="hzu-aT-oDR" kind="relationship" relationship="viewControllers" id="c5i-nH-XIZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Blh-CU-7CH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -30,11 +32,36 @@
         <scene sceneID="7fW-J9-ngh">
             <objects>
                 <viewControllerPlaceholder storyboardName="Map" id="II6-lN-rzL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="jqZ-LS-5zR"/>
+                    <tabBarItem key="tabBarItem" title="地図" image="Tab-map" selectedImage="Tab-map" id="jqZ-LS-5zR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYP-hV-gdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="205" y="-402"/>
         </scene>
+        <!--Favorites-->
+        <scene sceneID="xwc-8B-Dr4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Favorites" id="gcc-RO-xQb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="お気に入り" image="Tab-favorite" selectedImage="Tab-favorite" id="mQT-4W-46I"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="35a-yz-hPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="-242"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="x37-RY-QRa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Information" id="hzu-aT-oDR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="情報" image="Tab-infomation" selectedImage="Tab-infomation" id="OgP-lG-jZJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MqN-HY-rRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="-103"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Tab-favorite" width="25" height="25"/>
+        <image name="Tab-infomation" width="25" height="25"/>
+        <image name="Tab-map" width="25" height="25"/>
+    </resources>
 </document>
