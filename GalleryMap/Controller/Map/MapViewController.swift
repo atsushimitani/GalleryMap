@@ -31,6 +31,9 @@ class MapViewController: UIViewController, MyMapViewDelegate {
         
         // Firestoreからデータ取得
         let db = Firestore.firestore()
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
         db.collection("galleries").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")

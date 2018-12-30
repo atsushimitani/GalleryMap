@@ -26,6 +26,9 @@ class DetailViewController: UIViewController {
    
         // Firestoreからデータ取得
         let db = Firestore.firestore()
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
         let docRef = db.collection("galleries").document(galleryId)
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
