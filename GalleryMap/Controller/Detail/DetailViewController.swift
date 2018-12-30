@@ -19,6 +19,10 @@ class DetailViewController: UIViewController {
     
     private(set) var galleryId: String?
 
+    @IBAction func handleBackButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
