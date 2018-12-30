@@ -15,6 +15,10 @@ class MapViewController: UIViewController, MyMapViewDelegate {
     
     @IBOutlet weak var mapView: MyMapView!
     
+    @IBAction func handleChangeCityButton(_ sender: Any) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,12 +26,6 @@ class MapViewController: UIViewController, MyMapViewDelegate {
         
         mapView.setup()
         mapView.initLocationManager()
-        
-        // buttonを表示するs
-        let button = UIButton(frame: CGRect(x: 10, y: 35, width: 100, height: 30))
-        button.setTitle("都市を選択", for: .normal)
-//        button.addTarget(self, action: #selector(showCitiesOption()), for: UIControlEvents.touchUpInside)
-        self.view.addSubview(button)
         
         // Firestoreからデータ取得
         let db = Firestore.firestore()
@@ -59,11 +57,6 @@ class MapViewController: UIViewController, MyMapViewDelegate {
             detailViewController.setGalleryId(id: galleryId)
             self.navigationController?.pushViewController(detailViewController, animated: true)
         }
-    }
-    
-    // 都市選択のプルダウンを表示
-    @objc func showCitiesOption() {
-
     }
     
 }
