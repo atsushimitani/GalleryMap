@@ -18,27 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkg-M9-Xba">
-                                <rect key="frame" x="10" y="30" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkg-M9-Xba" userLabel="Close Button">
+                                <rect key="frame" x="10" y="30" width="79" height="25"/>
+                                <state key="normal" title="Button" image="Close"/>
                                 <connections>
                                     <action selector="handleBackButton:" destination="vCc-qZ-8Ih" eventType="touchUpInside" id="F8I-9G-Qbi"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKa-jE-Icq">
-                                <rect key="frame" x="20" y="80" width="335" height="26.5"/>
+                                <rect key="frame" x="20" y="75" width="335" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGf-lf-OSW">
-                                <rect key="frame" x="20" y="126" width="335" height="18"/>
+                                <rect key="frame" x="20" y="121" width="335" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RkP-E0-PhX" userLabel="Url Text View">
-                                <rect key="frame" x="20" y="164" width="335" height="60"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RkP-E0-PhX" userLabel="Url Text View">
+                                <rect key="frame" x="20" y="159" width="335" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="qxx-5C-2aE"/>
@@ -75,4 +75,7 @@
             <point key="canvasLocation" x="-535.20000000000005" y="-302.6986506746627"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Close" width="25" height="25"/>
+    </resources>
 </document>

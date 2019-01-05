@@ -30,8 +30,8 @@ class DetailViewController: UIViewController {
         
         guard let galleryId = self.galleryId else {return}
         
-        urlTextView.isSelectable = true
-        urlTextView.isEditable = false
+        //urlTextView.isSelectable = true
+        //urlTextView.isEditable = false
         
         // Firestoreからデータ取得
         let db = Firestore.firestore()
