@@ -56,7 +56,6 @@ class MapViewController: UIViewController, MyMapViewDelegate {
             // 詳細画面に遷移する
             detailViewController.setGalleryId(id: galleryId)
             self.show(detailViewController, sender: nil)
-//            self.navigationController?.pushViewController(detailViewController, animated: true)
         }
     }
     

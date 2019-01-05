@@ -15,9 +15,11 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak private var genreLabel: UILabel!
     
-    @IBOutlet weak private var urlLabel: UILabel!
+    @IBOutlet weak var urlTextView: UITextView!
     
-    private(set) var galleryId: String?
+    private(set) var galleryId: String? = nil
+    
+    private var gallery : GalleryEntity? = nil
 
     @IBAction func handleBackButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -26,8 +28,11 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let galleryId : String = self.galleryId else {return}
-   
+        guard let galleryId = self.galleryId else {return}
+        
+        urlTextView.isSelectable = true
+        urlTextView.isEditable = false
+        
         // Firestoreからデータ取得
         let db = Firestore.firestore()
         let settings = db.settings
@@ -36,8 +41,8 @@ class DetailViewController: UIViewController {
         let docRef = db.collection("galleries").document(galleryId)
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                let gallery = GalleryEntity(id: galleryId, data: document.data()!)
-                self.loadGalleryDetail(gallery: gallery)
+                self.gallery = GalleryEntity(id: galleryId, data: document.data()!)
+                self.showDetail(gallery: self.gallery!)
             } else {
                 print("Document does not exist")
             }
@@ -53,16 +58,25 @@ class DetailViewController: UIViewController {
     }
     
     // ギャラリー情報表示
-    private func loadGalleryDetail(gallery: GalleryEntity) {
-        self.nameLabel.text = gallery.name
+    private func showDetail(gallery: GalleryEntity) {
+        nameLabel.text = gallery.name
         
         // ジャンル名を半角スペース区切りで表示
         var genreText = ""
         for genre in gallery.genres {
             genreText += "\(genre) "
         }
-        self.genreLabel.text = genreText
+        genreLabel.text = genreText
         
-        self.urlLabel.text = gallery.url
+        if let url = gallery.url {
+            urlTextView.text = url
+            urlTextView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openUrl)))
+        }
+    }
+    
+    @objc func openUrl() {
+        if let urlString = gallery!.url, let url = URL(string: urlString) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 }
